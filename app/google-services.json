@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "898149285970",
+    "firebase_url": "https://gallosapp.firebaseio.com",
+    "project_id": "gallosapp",
+    "storage_bucket": "gallosapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:898149285970:android:cf0b3ec24c80b984",
+        "android_client_info": {
+          "package_name": "com.example.andres.gallosapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "898149285970-i8noqdfa3sv9acj6bl0kkoc2g5fdln6a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.andres.gallosapp",
+            "certificate_hash": "6ba0aef026d7a04be072dbb94c074e88c3da8b37"
+          }
+        },
+        {
+          "client_id": "898149285970-vhatq74c811utjfcdvk0c4opgppqf5pv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAlk655SVAK25H5HIlfl5o-gCajMPeRYA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "898149285970-vhatq74c811utjfcdvk0c4opgppqf5pv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
