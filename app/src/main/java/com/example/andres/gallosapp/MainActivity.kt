@@ -12,6 +12,7 @@ import com.google.firebase.auth.FirebaseUser
 
 
 class MainActivity : AppCompatActivity() {
+    val manager = supportFragmentManager
 
     private var mTextMessage: TextView? = null
     private var mAuth: FirebaseAuth? = null
@@ -19,18 +20,16 @@ class MainActivity : AppCompatActivity() {
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
             R.id.navigation_home -> {
-                LoginActivity()
-                mTextMessage!!.setText(R.string.title_home)
+                Show_About_Fragment()
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_dashboard -> {
-                mTextMessage!!.setText(R.string.title_dashboard)
+                Show_Info_Fragment()
                 return@OnNavigationItemSelectedListener true
             }
-            R.id.navigation_notifications -> {
-                mTextMessage!!.setText(R.string.title_notifications)
-                return@OnNavigationItemSelectedListener true
-            }
+//            R.id.navigation_notifications -> {
+//                return@OnNavigationItemSelectedListener true
+//            }
         }
         false
     }
@@ -40,12 +39,26 @@ class MainActivity : AppCompatActivity() {
         mAuth = FirebaseAuth.getInstance()
         setContentView(R.layout.activity_main)
 
-        mTextMessage = findViewById(R.id.message) as TextView
         val navigation = findViewById(R.id.navigation) as BottomNavigationView
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
-
+        Show_About_Fragment()
 
     }
 
+    fun Show_About_Fragment() {
+        val transaction = manager.beginTransaction()
+        val fragment = ListItemFragment()
+        transaction.replace(R.id.fragment_holder, fragment)
+        transaction.addToBackStack(null)
+        transaction.commit()
+    }
+
+    fun Show_Info_Fragment() {
+        val transaction = manager.beginTransaction()
+        val fragment = InfoFragment()
+        transaction.replace(R.id.fragment_holder, fragment)
+        transaction.addToBackStack(null)
+        transaction.commit()
+    }
 
 }
